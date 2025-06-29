@@ -34,7 +34,7 @@ MINIO_SECRET_KEY=P@SSWORD
 MINIO_SECURE=false
 ```
 
-### 3. (Optional) Start MinIO with Docker
+### 3. Start MinIO with Docker
 
 A `docker-compose.yml` is provided for quick local setup:
 
