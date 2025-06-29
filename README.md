@@ -19,8 +19,8 @@ This repository provides a set of Python utilities for interacting with a [MinIO
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd minio-db
+git clone --branch Main https://github.com/trungthanhnguyenn/Minio-law.git
+cd Minio-law
 ```
 
 ### 2. Configure Environment Variables
@@ -50,15 +50,16 @@ This will start MinIO on `localhost:1000` (API) and `localhost:1001` (console).
 
 ### 1. MinIO Client
 
-Initialize a MinIO client in your Python code:
+Initialize a MinIO client and create a bucket in your Python code:
 
 ```python
 from client import MinioClient
+from module.loader import MinioLoader
 
-minio_client = MinioClient()
-buckets = minio_client.list_buckets()
-for bucket in buckets:
-    print(bucket.name)
+# ============================
+# 📤 Create bucket
+# ============================
+uploader.ensure_bucket("test") 
 ```
 
 ### 2. File Operations with MinioLoader
@@ -108,14 +109,14 @@ minio-db/
 
 ## Requirements
 
-- Python 3.7+
+- Python 3.10+
 - [minio](https://pypi.org/project/minio/)
 - [python-dotenv](https://pypi.org/project/python-dotenv/)
 
 Install dependencies:
 
 ```bash
-pip install minio python-dotenv
+pip install -r requirements.txt
 ```
 
 ---
