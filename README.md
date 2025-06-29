@@ -147,7 +147,7 @@ pip install minio python-dotenv
 
 ## License
 
-MIT License
+Apache-2.0 license
 
 ---
 
